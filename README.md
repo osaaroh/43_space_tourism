@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# Space tourism website - Frontend Mentor 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Design preview for the Space tourism website coding challenge](./preview.jpg)
 
-## Available Scripts
+## Welcome! 👋
 
-In the project directory, you can run:
+## Table of contents
 
-### `npm start`
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Overview
 
-### `npm test`
+### The challenge
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Users should be able to:
 
-### `npm run build`
+- View the optimal layout for each of the website's pages depending on their device's screen size
+- See hover states for all interactive elements on the page
+- View each page and be able to toggle between the tabs to see new information
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Links
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Live Site URL: [Live Demo](https://url-shortener-o.netlify.app/)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## My process
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Built with
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Semantic HTML5 markup
+- CSS custom properties
+- React.js
+- React Router
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### What I learned
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- React  v6
 
-### Code Splitting
+```js
+<BrowserRouter>
+      <NavigationBar />
+      <Routes>
+        <Route exact path='/' element={<Home />} />
+        <Route path='/destination' element={<DestinationComponent />} />
+        <Route path='/crew' element={<CrewComponent crewMember={data.crew[0]} crewMemberIndex={0} />} />
+        {//generate routes for crew members 
+        data.crew.map((crewMember, index)=>{
+          return <Route key={index} path={`${crewMember.path}`}element={<CrewComponent crewMember={crewMember} crewMemberIndex={index}/>} />
+        })} 
+        <Route path='/technology' element={<TechnologyComponent technology={data.technology[0]} techindex={0}/>} /> 
+        {//generate routes for different techs 
+        data.technology.map((tech, index)=>{
+          return <Route key={index} path={`${tech.path}`}element={<TechnologyComponent technology={tech} techindex={index} />} />
+        })}
+          
+      </Routes>
+    </BrowserRouter>
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Author
+- Frontend Mentor - [@Master-Osaro](https://www.frontendmentor.io/profile/Master-Osaro)
+- Twitter - [@iyoha_osaro](https://twitter.com/iyoha_osaro)
+- Github - [@osaaroh](https://github.com/Master-Osaro/)
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Had fun building!** 🚀
