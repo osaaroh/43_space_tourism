@@ -33,7 +33,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Live Demo](https://url-shortener-o.netlify.app/)
+- Live Site URL: [Live Demo](https://space-tourism-o.netlify.app/)
 
 ## My process
 
