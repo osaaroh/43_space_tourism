@@ -298,7 +298,7 @@ nav {
     border: none;
 }
 
-.home__button:hover {
+.home__button:hover, .home__button:active, .home__button:focus {
     outline-width: 5rem;
 }
 
@@ -548,7 +548,7 @@ nav {
     transition: background-color color outline-color;
     transition-duration: .25s;
 }
-.technology__link:hover {
+.technology__link:hover, .technology__link:focus{
     outline-color: var(--color-white);
 }
 
