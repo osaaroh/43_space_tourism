@@ -69,7 +69,7 @@ const NavigationBar =()=>{
 
             <div className="nav__hoverbar" ></div>
         </ul>
-        <button className="nav-btn">
+        <button className="nav-btn" aria-label="navigation button">
             <img className="nav-btn__icon" src={hamIcon} alt=""  onClick={()=>{setOpenMobileNavBar(!navOpen)}}/>
         </button>
         </nav>
